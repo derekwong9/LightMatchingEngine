@@ -220,6 +220,8 @@ class LightMatchingEngine(object):
             if price_level[index].order_id == order_id:
                 del price_level[index]
                 break
+            else:
+                index += 1
         
         if index == price_level_len:
             # Cannot find the order ID. Incorrect side
